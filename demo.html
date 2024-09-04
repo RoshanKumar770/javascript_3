@@ -2,7 +2,7 @@
 <html>
 <link rel="stylesheet" href="demo.js">
 <style>
-  div {
+  .bulb {
     height: 170px;
     width: 170px;
     border-radius: 50px;
@@ -12,13 +12,13 @@
 
   button {
     border-radius: 20px;
-    border-width: 5px;
+    border-width: 3px;
     border-style: solid;
     border-color: white;
     margin-top: 10px;
     margin-left: 100px;
     padding: 20px;
-
+    cursor: pointer;
   }
 </style>
 
@@ -28,13 +28,26 @@
 <head>
 
 <body>
-  <div>
+  <div class="bulb">
 
   </div>
   <button>ON</button>
 
   <script>
-
+    var flag = 0;
+    var button = document.querySelector("button").innerHTML = "ON";
+    var bulb = document.querySelector("bulb");
+    if (flag == 0) {
+      button.addEventListener("click", function () {
+        button.document.querySelector("button").innerHTML = "OFF";
+        flag = 1;
+      })
+    }
+    else {
+      button.innerHTML = "ON"
+      bulb.style.backgroundColor = "transparent";
+      flag = 0;
+    }
   </script>
 </body>
 

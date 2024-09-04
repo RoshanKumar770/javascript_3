@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style>
+  .bulb {
+    height: 170px;
+    width: 170px;
+    border-radius: 50px;
+    background-color: yellow;
+    margin: 50px;
+  }
+
+  button {
+    border-radius: 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    margin-top: 10px;
+    margin-left: 100px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: transparent;
+  }
+</style>
+
+<title>DOM</title>
+
+<body>
+  <div class="bulb"></div>
+  <button>ON</button>
+
+  <script>
+    var flag = 1;
+    var button = document.querySelector("button");
+    var bulb = document.querySelector(".bulb");
+
+    button.addEventListener("click", function () {
+      if (flag == 0) {
+        button.innerHTML = "OFF"; // Change button text to "OFF"
+        bulb.style.backgroundColor = "transparent"; // Turn off the bulb
+        flag = 1;
+      } else {
+        button.innerHTML = "ON"; // Change button text to "ON"
+        bulb.style.backgroundColor = "yellow"; // Turn on the bulb
+        flag = 0;
+      }
+    });
+  </script>
+</body>
+
+</html>
