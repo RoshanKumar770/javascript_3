@@ -66,11 +66,15 @@
       if (flag == 1) {
         bulb.style.backgroundColor = "grey";
         button.innerHTML = "OFF";
+        button.style.backgroundColor="red";
+        button.style.color="white";
         flag = 0;
       }
       else {
         bulb.style.backgroundColor = "Yellow";
         button.innerHTML = "ON";
+        button.style.backgroundColor=" rgb(37, 237, 64)";
+        button.style.color="black";
         flag = 1;
       }
     });
