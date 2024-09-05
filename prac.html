@@ -44,6 +44,10 @@
     margin-left: 100px;
     font-style: italic;
   }
+
+  body {
+    background-color: rgb(182, 132, 139);
+  }
 </style>
 
 <body>
@@ -53,23 +57,23 @@
     <div><button>ON</button></div>
   </div>
   <script>
-    var flag=1;
+    var flag = 1;
+
     var bulb = document.querySelector(".bulb");
-    var button= document.querySelector("button");
-    if(flag==1){
-      button.addEventListener("click",function(){
-        bulb.style.backgroundColor="grey";
-        button.innerHTML="OFF";
-        flag=0;
-      })
-    }
-    else{
-      button.addEventListener("click",function(){
-        bulb.style.backgroundColor="Yellow";
-        button.innerHTML="ON";
-        flag=1;
-      })
-    }
+    var button = document.querySelector("button");
+
+    button.addEventListener("click", function () {
+      if (flag == 1) {
+        bulb.style.backgroundColor = "grey";
+        button.innerHTML = "OFF";
+        flag = 0;
+      }
+      else {
+        bulb.style.backgroundColor = "Yellow";
+        button.innerHTML = "ON";
+        flag = 1;
+      }
+    });
   </script>
 </body>
 
