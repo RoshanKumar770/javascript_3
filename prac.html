@@ -9,20 +9,18 @@
     align-items: center;
     height: 100px;
     width: 100px;
-    background-color: yellow;
-    border-style: solid;
-    border-color: greenyellow;
+    background-color: grey;
     border-radius: 70px;
-    margin-left: 300px;
+    margin-left: 297px;
     margin-top: 150px;
+    border-style: solid;
+    border-width: 2px;
   }
 
   .box {
     height: 280px;
     width: 80px;
     background-color: rgb(31, 63, 42);
-    border-style: solid;
-    border-color: greenyellow;
     margin-left: 310px;
     border-radius: 10px;
   }
@@ -65,16 +63,16 @@
     button.addEventListener("click", function () {
       if (flag == 1) {
         bulb.style.backgroundColor = "grey";
-        button.innerHTML = "OFF";
-        button.style.backgroundColor="red";
-        button.style.color="white";
+button.innerHTML = "ON";
+        button.style.backgroundColor=" rgb(37, 237, 64)";
+        button.style.color="black";
         flag = 0;
       }
       else {
         bulb.style.backgroundColor = "Yellow";
-        button.innerHTML = "ON";
-        button.style.backgroundColor=" rgb(37, 237, 64)";
-        button.style.color="black";
+        button.innerHTML = "OFF";
+        button.style.backgroundColor="red";
+        button.style.color="white";
         flag = 1;
       }
     });
