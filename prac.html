@@ -1,55 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Dom</title>
-  </head>
-  <style>
-    .bulb{
-      align-items: center;
-      height: 100px;
-      width: 100px;
-      background-color: yellow;
-      border-style: solid;
-      border-color:greenyellow;
-      border-radius: 70px;
-      margin-left:300px;
-      margin-top: 150px;
-    }
-    .box{
-      height: 280px;
-      width:80px;
-      background-color: rgb(31, 63, 42);
-      border-style: solid;
-      border-color: greenyellow;
-      margin-left: 310px;
-      border-radius: 10px;
-    }
-    button{
-      margin-left: 20px;
-      border-style: solid;
-      border-color:black;
-      margin-top: 100px;
-      border-radius: 5px;
-      height: 30px;
-      width: 40px;
-      background-color:rgb(37, 237, 64);
-      cursor:pointer;
-    }
-    h1{
-      margin-top: 50px;
-      margin-left: 100px;
-      font-style:italic;
-    }
 
-  </style>
-  <body>
-    <h1>BULB SWITCHING TOGGLE TO ON/OFF</h1>
-    <div class="bulb"></div>
-    <div class="box">
-      <div><button>ON</button></div>
-    </div>
-    <script>
+<head>
+  <title>Dom</title>
+</head>
+<style>
+  .bulb {
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    border-style: solid;
+    border-color: greenyellow;
+    border-radius: 70px;
+    margin-left: 300px;
+    margin-top: 150px;
+  }
 
-    </script>
-  </body>
+  .box {
+    height: 280px;
+    width: 80px;
+    background-color: rgb(31, 63, 42);
+    border-style: solid;
+    border-color: greenyellow;
+    margin-left: 310px;
+    border-radius: 10px;
+  }
+
+  button {
+    margin-left: 20px;
+    border-style: solid;
+    border-color: black;
+    margin-top: 100px;
+    border-radius: 5px;
+    height: 30px;
+    width: 40px;
+    background-color: rgb(37, 237, 64);
+    cursor: pointer;
+  }
+
+  h1 {
+    margin-top: 50px;
+    margin-left: 100px;
+    font-style: italic;
+  }
+</style>
+
+<body>
+  <h1>BULB SWITCHING TOGGLE TO ON/OFF</h1>
+  <div class="bulb"></div>
+  <div class="box">
+    <div><button>ON</button></div>
+  </div>
+  <script>
+    var flag=1;
+    var bulb = document.querySelector(".bulb");
+    var button= document.querySelector("button");
+    if(flag==1){
+      button.addEventListener("click",function(){
+        bulb.style.backgroundColor="grey";
+        button.innerHTML="OFF";
+        flag=0;
+      })
+    }
+    else{
+      button.addEventListener("click",function(){
+        bulb.style.backgroundColor="Yellow";
+        button.innerHTML="ON";
+        flag=1;
+      })
+    }
+  </script>
+</body>
+
 </html>
