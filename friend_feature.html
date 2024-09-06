@@ -54,25 +54,35 @@
     padding: 10px;
     margin-left: 40px;
     background-color: rgb(206, 201, 201);
+    color: black;
     font-weight: bold;
     border-radius: 5px;
     border: none;
     cursor: pointer;
   }
+
+  .row {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    column-gap: 30px;
+
+  }
 </style>
 
 <body>
-  <div class="card">
-    <img src="assets/img.jpg">
+  <div class="row">
+    <div class="card">
+      <img src="assets/relatable.jpeg">
 
-    <h2>Rachel & Ar3s</h2>
-    <h3>Stranger</h3>
-    <div>
-      <button id="btn1">Remove</button>
-      <button id="btn2">Add Friend</button>
+      <h2>Rachel & Ar3s</h2>
+      <h3>Stranger</h3>
+      <div>
+        <button id="btn1">Remove</button>
+        <button id="btn2">Add Friend</button>
+      </div>
     </div>
-  </div>
 
+  </div>
   <script>
     var flag = 1;
     var a = document.querySelector("#btn2");
@@ -84,6 +94,7 @@
         b.innerHTML = "Friends";
         b.style.color = "rgb(46, 152, 73)";
         a.innerHTML = "Added";
+        c.style.backgroundColor = "rgb(206, 201, 201)";
         flag = 0;
       }
       else {
@@ -94,7 +105,7 @@
         flag = 1;
       }
     });
-    c.addEventListener("click",function(){
+    c.addEventListener("click", function () {
       if (flag == 1) {
         a.style.backgroundColor = "rgb(117, 229, 100)";
         b.innerHTML = "Friends";
@@ -103,14 +114,14 @@
         flag = 0;
       }
       else {
-        c.style.backgroundColor ="red";
+        c.style.backgroundColor = "red";
         b.innerHTML = "Stranger";
         b.style.color = "red";
-        c.style.color = "white";
+        c.style.color = "black";
         a.innerHTML = "Add Friend";
-        c.innerHTML="Removed";
-        flag=1;
-      }     
+        c.innerHTML = "Removed";
+        flag = 1;
+      }
     })
   </script>
 </body>
