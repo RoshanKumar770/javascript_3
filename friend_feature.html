@@ -29,12 +29,30 @@
     background-color: white;
   }
 
+  .card2 {
+    height: 450px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: white;
+  }
+
   h2 {
     margin-left: 60px;
     font-size: 25px;
   }
 
   h3 {
+    margin-left: 100px;
+    font-size: 22px;
+    color: red;
+  }
+
+  .h2 {
+    margin-left: 60px;
+    font-size: 25px;
+  }
+
+  .h3 {
     margin-left: 100px;
     font-size: 22px;
     color: red;
@@ -51,6 +69,27 @@
   }
 
   #btn2 {
+    padding: 10px;
+    margin-left: 40px;
+    background-color: rgb(206, 201, 201);
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  #btn3 {
+    padding: 10px;
+    margin-left: 50px;
+    background-color: rgb(206, 201, 201);
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  #btn4 {
     padding: 10px;
     margin-left: 40px;
     background-color: rgb(206, 201, 201);
@@ -79,6 +118,16 @@
       <div>
         <button id="btn1">Remove</button>
         <button id="btn2">Add Friend</button>
+      </div>
+    </div>
+    <div class="card2">
+      <img src="assets/Relatable.jpg">
+
+      <h2 class="h2">Rachel & Ar3s</h2>
+      <h3 class="h3">Stranger</h3>
+      <div>
+        <button id="btn3">Remove</button>
+        <button id="btn4">Add Friend</button>
       </div>
     </div>
 
@@ -120,6 +169,45 @@
         c.style.color = "black";
         a.innerHTML = "Add Friend";
         c.innerHTML = "Removed";
+        flag = 1;
+      }
+    })
+    var flag = 1;
+    var e = document.querySelector("#btn4");
+    var f = document.querySelector(".h3");
+    var g = document.querySelector("#btn3");
+    e.addEventListener("click", function () {
+      if (flag == 1) {
+        e.style.backgroundColor = "rgb(117, 229, 100)";
+        f.innerHTML = "Friends";
+        f.style.color = "rgb(46, 152, 73)";
+        e.innerHTML = "Added";
+        g.style.backgroundColor = "rgb(206, 201, 201)";
+        flag = 0;
+      }
+      else {
+        e.style.backgroundColor = "rgb(206, 201, 201)";
+        f.innerHTML = "Stranger";
+        f.style.color = "red";
+        e.innerHTML = "Add Friend";
+        flag = 1;
+      }
+    });
+    g.addEventListener("click", function () {
+      if (flag == 1) {
+        e.style.backgroundColor = "rgb(117, 229, 100)";
+        f.innerHTML = "Friends";
+        f.style.color = "rgb(46, 152, 73)";
+        e.innerHTML = "Added";
+        flag = 0;
+      }
+      else {
+        g.style.backgroundColor = "red";
+        f.innerHTML = "Stranger";
+        f.style.color = "red";
+        g.style.color = "black";
+        e.innerHTML = "Add Friend";
+        g.innerHTML = "Removed";
         flag = 1;
       }
     })
