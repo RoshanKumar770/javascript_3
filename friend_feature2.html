@@ -44,7 +44,7 @@
   #btn2 {
     padding: 10px;
     margin-left: 40px;
-    background-color: rgb(181, 183, 182);
+    background-color: rgb(17, 238, 128);
     color: black;
     font-weight: bold;
     border-radius: 5px;
@@ -73,11 +73,13 @@
         console.log("click");
         b.innerHTML = "Friends";
         b.style.color = "rgb(37, 200, 82)";
+        a.innerHTML = "Remove Friend";
         flag = 1;
       }
       else {
         b.innerHTML = "Stranger";
         b.style.color = "red";
+        a.innerHTML = "Add Friend";
         flag = 0;
       }
     })
