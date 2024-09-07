@@ -44,7 +44,7 @@
   #btn2 {
     padding: 10px;
     margin-left: 40px;
-    background-color: rgb(206, 201, 201);
+    background-color: rgb(181, 183, 182);
     color: black;
     font-weight: bold;
     border-radius: 5px;
@@ -70,8 +70,9 @@
     var b = document.querySelector("h3");
     a.addEventListener("click", function () {
       if (flag == 0) {
+        console.log("click");
         b.innerHTML = "Friends";
-        b.style.color = "green";
+        b.style.color = "rgb(37, 200, 82)";
         flag = 1;
       }
       else {
@@ -80,3 +81,7 @@
         flag = 0;
       }
     })
+  </script>
+</body>
+
+</html>
