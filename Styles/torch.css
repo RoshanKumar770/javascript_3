@@ -1,0 +1,42 @@
+.bulb {
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  background-color: grey;
+  border-radius: 70px;
+  margin-left: 297px;
+  margin-top: 150px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.box {
+  height: 280px;
+  width: 80px;
+  background-color: rgb(31, 63, 42);
+  margin-left: 310px;
+  border-radius: 10px;
+}
+
+button {
+  margin-left: 20px;
+  border-style: solid;
+  border-color: black;
+  margin-top: 100px;
+  border-radius: 5px;
+  height: 30px;
+  width: 40px;
+  background-color: rgb(37, 237, 64);
+  cursor: pointer;
+  font-weight:bold;
+}
+
+h1 {
+  margin-top: 50px;
+  margin-left: 100px;
+  font-style: italic;
+}
+
+body {
+  background-color: rgb(182, 132, 139);
+}
