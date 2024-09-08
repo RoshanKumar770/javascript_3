@@ -1,0 +1,22 @@
+.bulb {
+  height: 170px;
+  width: 170px;
+  border-radius: 50px;
+  background-color: yellow;
+  margin: 50px;
+  border-style:solid;
+  border-width: 3px;
+  border-color: red;
+}
+
+button {
+  border-radius: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(252, 23, 23);
+  margin-top: 10px;
+  margin-left: 100px;
+  padding: 20px;
+  cursor: pointer;
+  background-color: transparent;
+}
