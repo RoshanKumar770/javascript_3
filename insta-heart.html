@@ -3,37 +3,9 @@
 
 <head>
   <title>insta heart</title>
+  <link rel="stylesheet" href="Styles/insta.css">
 </head>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-<style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(204, 154, 251);
-    position: relative;
-  }
-
-  img {
-    border-radius: 10px;
-    object-fit: cover;
-    width: 250px;
-    height: 325px;
-    margin-top: 250px;
-    cursor: pointer;
-  }
-
-  #container i {
-    color: white;
-    font-size: 60px;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    opacity: 0.8;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform ease 0.5s;
-  }
-</style>
 
 <body>
   <div id="container">
@@ -44,19 +16,7 @@
 
 
   <script>
-    var heart = document.querySelector("img");
-    var i = document.querySelector("i");
-    heart.addEventListener("dblclick", function () {
-      i.style.transform = "translate(-50%,-50%) scale(1)";
-      i.style.opacity = "0.8";
-
-      setTimeout(function () {
-        i.style.opacity = "0";
-      }, 1000);
-      setTimeout(function () {
-        i.style.transform = "translate(-50%,-50%) scale(0)";
-      }, 2000);
-    });
+    
   </script>
 </body>
 
