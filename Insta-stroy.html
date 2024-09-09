@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>insta story</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      background-color:black;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #card {
+      height: 400px;
+      width: 300px;
+      background-color: white;
+      border: 3px solid greenyellow;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    #story-container {
+      height: 65px;
+      border: 1px solid #dadada;
+      padding: 10px;
+      white-space: nowrap;   /* In one line without going to next line */
+      overflow-x: auto;     /* Scrollable with scroll bar in x- axis*/
+      overflow-y: hidden;    /*hidding the y-axis scroll bar feature*/
+    }
+
+    #story-container::-webkit-scrollbar{
+      display: none;      /* hidding the scroll-bar*/
+    }
+    .story {
+      height: 60px;
+      width: 60px;
+      border-radius: 50px;
+      border: 2px solid rgb(255, 47, 102);
+      overflow: hidden;
+      display: inline-block;
+    }
+
+    .story img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="card">
+    <div id="story-container">
+      <div class="story">
+        <img src="Assets/rauw.jpeg" alt="">
+      </div>
+      <div class="story">
+        <img src="Assets/maluma.jpg.avif" alt="">
+      </div>
+      <div class="story">
+        <img src="Assets/lenny.jpg" alt="">
+      </div>
+      <div class="story">
+        <img src="Assets/lyanno.jpg" alt="">
+      </div>
+      <div class="story">
+        <img src="Assets/relaLble.jpg" alt="">
+      </div>
+      <div class="story">
+        <img src="Assets/relatable.jpeg" alt="">
+      </div>
+    </div>
+  </div>
+  <script>
+  </script>
+</body>
+
+</html>
