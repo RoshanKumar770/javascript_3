@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>darked</title>
+    <style>
+      body,html{
+        height: 100%;
+        width: 100%;
+      }
+      #head{
+        background-color: transparent;
+
+      }
+      .cont{
+        display: inline-block;
+      }
+      button{
+        height: 30px;
+        width: 60px;
+        padding:5px;
+        color:black;
+        font-weight: bold;
+        border-radius: 12px;
+        border-style: solid;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont">
+      <h1>Dark Mode Toggle</h1>
+          <button>OFF</button>
+    </div>
+    
+    <script>
+      var back=document.querySelector("body");
+      var button=document.querySelector("button");
+      var h1=document.querySelector("h1");
+      button.addEventListener("click",function(){
+        back.style.backgroundColor="black";
+        h1.style.color="white";
+        button.innerHTML="ON";
+      })
+    </script>
+  </body>
+</html>
